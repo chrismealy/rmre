@@ -39,7 +39,7 @@ module Rmre
     end
     
     def create_model(table_name)
-      File.open(File.join(output_path, "#{table_name}.rb"), "w") do |file|
+      File.open(File.join(output_path, "#{table_name.singularize}.rb"), "w") do |file|
         constraints = []
 
         foreign_keys.each do |fk|
